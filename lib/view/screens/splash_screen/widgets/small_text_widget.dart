@@ -58,7 +58,7 @@ class _SmallTextWidgetState extends State<SmallTextWidget> {
               ),
               if (mainScreen.ifIndexIsActive(widget.index))
                 const Align(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.topCenter,
                   child: QuillToolbar(),
                 )
             ],

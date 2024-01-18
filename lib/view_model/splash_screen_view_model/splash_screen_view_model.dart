@@ -41,7 +41,7 @@ class MainScreenNotifier extends ChangeNotifier {
 
   void addSmallWidget(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    _position.add(Offset(size.width / 2, size.height / 2));
+    _position.add(Offset(size.width / 4, size.height / 2));
     _smallWidgets.add(SmallTextWidget(
       index: _position.length - 1,
     ));

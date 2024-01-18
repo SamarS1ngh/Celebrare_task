@@ -36,7 +36,7 @@ class _QuillTextWidgetState extends State<QuillTextWidget> {
         scrollController: ScrollController(),
         focusNode: _focusNode,
         configurations: const QuillEditorConfigurations(
-          placeholder: "Enter Text",
+          placeholder: "  Enter Text",
           readOnly: false,
         ),
       ),

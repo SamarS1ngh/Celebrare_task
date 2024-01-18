@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\91801\Documents\flutterLaptop\text_editor\android\app\src\main\AndroidManifest.xml:2:1-62
-15-->C:\Users\91801\Documents\flutterLaptop\text_editor\android\app\src\main\AndroidManifest.xml:2:18-60
+15-->C:\Users\91801\Documents\flutterLaptop\Celebrare_task\android\app\src\main\AndroidManifest.xml:2:1-62
+15-->C:\Users\91801\Documents\flutterLaptop\Celebrare_task\android\app\src\main\AndroidManifest.xml:2:18-60
 16
 17    <permission
 17-->[androidx.core:core:1.10.1] C:\Users\91801\.gradle\caches\transforms-3\cd4004a5a8de6d0562a63088cfc87de7\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
@@ -68,13 +68,13 @@
 60            android:value="2" />
 61
 62        <activity
-62-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\text_editor\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+62-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\Celebrare_task\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
 63            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-63-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\text_editor\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+63-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\Celebrare_task\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
 64            android:exported="false"
-64-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\text_editor\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+64-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\Celebrare_task\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
 65            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-65-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\text_editor\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+65-->[:url_launcher_android] C:\Users\91801\Documents\flutterLaptop\Celebrare_task\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
 66
 67        <uses-library
 67-->[androidx.window:window:1.0.0-beta04] C:\Users\91801\.gradle\caches\transforms-3\d943c78a6995a024f7a7534709dfc0f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
