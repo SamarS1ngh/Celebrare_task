@@ -1,0 +1,1 @@
+ C:\\Users\\91801\\Documents\\flutterLaptop\\Celebrare_task\\.dart_tool\\flutter_build\\0706777b28172f48e66f6cd30ba8f162\\native_assets.yaml: 
