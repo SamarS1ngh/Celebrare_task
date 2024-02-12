@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:editing_software/view/screens/splash_screen/widgets/quill_text_widget.dart';
 import 'package:editing_software/view_model/splash_screen_view_model/splash_screen_view_model.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +31,7 @@ class _SmallTextWidgetState extends State<SmallTextWidget> {
           configurations: QuillConfigurations(
             controller: _controller,
             sharedConfigurations: const QuillSharedConfigurations(
-              locale: Locale('de'),
+              locale: Locale('en'),
             ),
           ),
           child: Stack(
@@ -40,16 +42,21 @@ class _SmallTextWidgetState extends State<SmallTextWidget> {
                 child: Draggable(
                   hitTestBehavior: HitTestBehavior.opaque,
                   feedback: Container(
+                    padding: const EdgeInsets.all(5),
                     height: 40,
                     width: 200,
                     decoration:
-                        BoxDecoration(border: Border.all(color: Colors.black)),
-                  ),
-                  childWhenDragging: QuillTextWidget(
-                    index: widget.index,
+                        BoxDecoration(border: Border.all(color: Colors.white)),
                   ),
                   onDraggableCanceled: (vel, offset) {
-                    mainScreen.updatePosition(widget.index, offset);
+                    RenderBox? renderBox =
+                        context.findRenderObject() as RenderBox?;
+
+                    if (renderBox != null) {
+                      Offset localOffset = renderBox.globalToLocal(offset);
+
+                      mainScreen.updatePosition(widget.index, localOffset);
+                    }
                   },
                   child: QuillTextWidget(
                     index: widget.index,

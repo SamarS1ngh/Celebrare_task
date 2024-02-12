@@ -28,8 +28,16 @@ class MainScreenNotifier extends ChangeNotifier {
     _position = _;
     notifyListeners();
   }
-//
 
+//
+//
+  void removeWidget(int index) {
+    _smallWidgets.removeAt(index);
+    _position.removeAt(index);
+    notifyListeners();
+  }
+
+//
 //
   int _activeIndex = -1;
   int get activeIndex => _activeIndex;

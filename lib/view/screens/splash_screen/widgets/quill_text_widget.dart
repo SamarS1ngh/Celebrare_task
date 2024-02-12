@@ -29,17 +29,33 @@ class _QuillTextWidgetState extends State<QuillTextWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-      child: QuillEditor(
-        scrollController: ScrollController(),
-        focusNode: _focusNode,
-        configurations: const QuillEditorConfigurations(
-          placeholder: "  Enter Text",
-          readOnly: false,
+    return Stack(children: [
+      Container(
+        padding: const EdgeInsets.fromLTRB(5, 5, 25, 5),
+        width: 200,
+        decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+        child: QuillEditor.basic(
+          scrollController: ScrollController(),
+          focusNode: _focusNode,
+          configurations: const QuillEditorConfigurations(
+            placeholder: "  Enter Text",
+            readOnly: false,
+          ),
         ),
       ),
-    );
+      Positioned(
+        top: -10,
+        right: -15,
+        child: IconButton(
+            onPressed: () {
+              Provider.of<MainScreenNotifier>(context, listen: false)
+                  .removeWidget(widget.index);
+            },
+            icon: const Icon(
+              Icons.close,
+              color: Colors.white,
+            )),
+      ),
+    ]);
   }
 }

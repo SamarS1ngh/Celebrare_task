@@ -1,10 +1,6 @@
-// ignore_for_file: prefer_final_fields
-
-import 'dart:developer';
-
+import 'package:editing_software/view/screens/splash_screen/main_screen/page1.dart';
 import 'package:editing_software/view_model/splash_screen_view_model/splash_screen_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_quill/flutter_quill.dart';
 import 'package:provider/provider.dart';
 
 class MainEditorScreen extends StatefulWidget {
@@ -15,38 +11,27 @@ class MainEditorScreen extends StatefulWidget {
 }
 
 class _MainEditorScreenState extends State<MainEditorScreen> {
+  List<String> imgPth = [
+    'assets/temp1.jpg',
+    'assets/temp2.jpg',
+    'assets/temp3.jpg',
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          isExtended: true,
-          tooltip: "Add Text",
-          child: const Icon(Icons.add),
-          onPressed: () {
-            Provider.of<MainScreenNotifier>(context, listen: false)
-                .addSmallWidget(context);
-          },
+        appBar: AppBar(
+          title: const Text('Text Editor'),
+          backgroundColor: Colors.yellow,
         ),
-        body: Column(
-          children: [
-            const Text(
-              "Text Editor",
-              style: TextStyle(fontSize: 24),
-            ),
-            Expanded(
-              child: Consumer<MainScreenNotifier>(
-                builder: (context, mainScreen, child) => Stack(
-                  children: List.generate(
-                    mainScreen.smallWidgets.length,
-                    (index) {
-                      return mainScreen.smallWidgets[index];
-                    },
-                  ),
-                ),
-              ),
-            ),
-          ],
+        resizeToAvoidBottomInset: false,
+        body: PageView.builder(
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return ChangeNotifierProvider(
+                create: (context) => MainScreenNotifier(),
+                child: Page1(imagePath: imgPth[index]));
+          },
         ),
       ),
     );
